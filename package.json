@@ -1,0 +1,26 @@
+{
+  "name": "folder2md",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanlele/folder2md.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yanlele/folder2md/issues"
+  },
+  "homepage": "https://github.com/yanlele/folder2md#readme",
+  "devDependencies": {
+    "@types/jsdom": "^12.2.3",
+    "@types/node": "^11.11.0"
+  },
+  "dependencies": {
+    "jsdom": "^13.2.0"
+  }
+}
