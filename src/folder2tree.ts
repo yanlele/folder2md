@@ -3,7 +3,7 @@ import {JSDOM} from 'jsdom';
 const dom: Document = new JSDOM('').window.document;
 
 class Folder2Tree {
-  static arr2obj(arr) {
+  static arr2obj(arr: any) {
     const obj = {};
     for (let i = 0, len = arr.length; i < len; i++) {
       const em = arr[i];
@@ -26,8 +26,8 @@ class Folder2Tree {
     return count;
   }
 
-  static getTree(data) {
-    const result = this.createDiv();
+  static getTree(data: any) {
+    const result: HTMLDivElement = this.createDiv();
     const all = this.show(data, '');
     for (let i = 0; i < all.length; i++) {
       result.appendChild(all[i]);
@@ -35,7 +35,7 @@ class Folder2Tree {
     return result;
   }
 
-  static show(data, content) {
+  static show(data: any, content: string) {
     let all = [];
     const len = this.getObjLen(data);
     let count = 1;
@@ -63,7 +63,7 @@ class Folder2Tree {
   }
 
   static createDiv(key = '', value = '', front = '', isLast = false) {
-    const div = dom.createElement('div');
+    const div: HTMLDivElement = dom.createElement('div');
     if (key !== '') {
       div.setAttribute('data-key', key);
     }
@@ -80,7 +80,7 @@ class Folder2Tree {
    * @param {Dom} ctn 父级dom节点
    * @param {Object} data 描述文件夹层级关系对象
    */
-  static init(ctn, data) {
+  static init(ctn, data: any) {
     ctn = ctn || dom.getElementsByTagName("body")[0];
     if (data) {
       if (data instanceof Array) {
