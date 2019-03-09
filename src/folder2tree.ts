@@ -48,7 +48,7 @@ class Folder2Tree {
         all.push(this.createDiv(i, data[i], content, isLast));
       } else if (typeof data[i] === "object") {
         all.push(this.createDiv(i, i, content, isLast));
-        const arr = arguments.callee(data[i], front);
+        const arr = this.show(data[i], front);
         const parent = this.createDiv(i, '', content, isLast);
         for (const j in arr) {
           parent.appendChild(arr[j]);

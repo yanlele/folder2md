@@ -6,8 +6,6 @@ const fs = require('fs');
 const path = require('path');
 const filename = path.resolve(__dirname, 'output.md');
 const container = new jsdom_1.JSDOM('<div id="container"></div>').window.document;
-const dom = new jsdom_1.JSDOM(`<p>Hello world</p>`);
-console.log(dom.window.document.querySelector("p").textContent);
 const folderDom = folder2tree_1.default.init(container.querySelector('#container'), [
     {
         "img": [

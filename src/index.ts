@@ -1,13 +1,12 @@
 import {JSDOM} from 'jsdom'
 import folder2tree from './folder2tree';
+
 const fs = require('fs');
 const path = require('path');
 const filename = path.resolve(__dirname, 'output.md');
 
 
 const container = new JSDOM('<div id="container"></div>').window.document;
-const dom = new JSDOM(`<p>Hello world</p>`);
-console.log(dom.window.document.querySelector("p").textContent); // "Hello world"
 
 const folderDom = folder2tree.init(container.querySelector('#container'), [
   {
