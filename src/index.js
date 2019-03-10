@@ -14,7 +14,8 @@ const folderDom = folder2tree_1.default.init(container.querySelector('#container
         ]
     },
     {
-        "js": [{
+        "js": [
+            {
                 "common": [
                     "jquery.js", {
                         "highcharts": [{
@@ -24,13 +25,35 @@ const folderDom = folder2tree_1.default.init(container.querySelector('#container
                         ]
                     }
                 ]
-            }, {
+            },
+            {
                 "index": [
                     "mian.js", {
                         "modules": ["mod.video.js"]
                     }
                 ]
-            }]
+            }
+        ],
+        "js": [
+            {
+                "common": [
+                    "jquery.js", {
+                        "highcharts": [{
+                            "modules": ["exporting.js"]
+                        },
+                            "highcharts.js"
+                        ]
+                    }
+                ]
+            },
+            {
+                "index": [
+                    "mian.js", {
+                        "modules": ["mod.video.js"]
+                    }
+                ]
+            }
+        ]
     },
     {
         "css": [

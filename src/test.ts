@@ -1,8 +1,4 @@
-import {JSDOM} from "jsdom";
-const process = require('process');
+import { readdirSync } from 'fs-extra';
+import * as path from 'path';
 
-console.log(process.cwd());
-
-const dom: JSDOM = new JSDOM(`<p>Hello world</p>`);
-console.log(dom.window.document.querySelector("p").textContent); // "Hello world"
-
+console.log(readdirSync(path.resolve(__dirname)));

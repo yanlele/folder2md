@@ -16,23 +16,26 @@ const folderDom = folder2tree.init(container.querySelector('#container'), [
     ]
   },
   {
-    "js": [{
-      "common": [
-        "jquery.js", {
-          "highcharts": [{
-            "modules": ["exporting.js"]
-          },
-            "highcharts.js"
-          ]
-        }
-      ]
-    }, {
-      "index": [
-        "mian.js", {
-          "modules": ["mod.video.js"]
-        }
-      ]
-    }]
+    "js": [
+      {
+        "common": [
+          "jquery.js", {
+            "highcharts": [{
+              "modules": ["exporting.js"]
+            },
+              "highcharts.js"
+            ]
+          }
+        ]
+      },
+      {
+        "index": [
+          "mian.js", {
+            "modules": ["mod.video.js"]
+          }
+        ]
+      }
+    ]
   },
   {
     "css": [
