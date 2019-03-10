@@ -22,4 +22,5 @@ const getDirData = function (dir, outputDirData = []) {
         return outputDirData;
     }
 };
+exports.default = getDirData;
 //# sourceMappingURL=getDirData.js.map

@@ -1,6 +1,7 @@
 import {readdirSync, stat, Dirent, statSync} from 'fs-extra';
 import * as path from 'path';
 import {Stats} from "fs";
+import get = Reflect.get;
 
 /*获取路径数据*/
 // base path
@@ -23,5 +24,7 @@ const getDirData = function (dir: string, outputDirData: any[] = []) {
     return outputDirData;
   }
 };
+
+export default getDirData;
 // getDirData(dir);
 // console.log(JSON.stringify(getDirData('/Users/yanle/code/node/node-index/18年')));

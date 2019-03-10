@@ -2,11 +2,13 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const jsdom_1 = require("jsdom");
 const folder2tree_1 = require("./folder2tree");
+const getDirData_1 = require("./getDirData");
+const path = require("path");
+const fs_extra_1 = require("fs-extra");
 const fs = require('fs');
-const path = require('path');
 const filename = path.resolve(__dirname, 'output.md');
 const container = new jsdom_1.JSDOM('<div id="container"></div>').window.document;
-const folderDom = folder2tree_1.default.init(container.querySelector('#container'), [
+const testData = [
     {
         "img": [
             "sprite.png",
@@ -33,26 +35,6 @@ const folderDom = folder2tree_1.default.init(container.querySelector('#container
                     }
                 ]
             }
-        ],
-        "js": [
-            {
-                "common": [
-                    "jquery.js", {
-                        "highcharts": [{
-                            "modules": ["exporting.js"]
-                        },
-                            "highcharts.js"
-                        ]
-                    }
-                ]
-            },
-            {
-                "index": [
-                    "mian.js", {
-                        "modules": ["mod.video.js"]
-                    }
-                ]
-            }
         ]
     },
     {
@@ -64,10 +46,9 @@ const folderDom = folder2tree_1.default.init(container.querySelector('#container
     },
     "index.html",
     "favicon.ico"
-]);
-fs.writeFile(filename, folderDom.innerHTML, { flag: 'a' }, err => {
-    if (err)
-        console.log(err);
-    console.log('生成文件成功');
-});
+];
+const folderDom = folder2tree_1.default.init(container.querySelector('#container'), getDirData_1.default('/Users/yanle/code/company/marvel-fe/packages/venom-fe/src'));
+fs_extra_1.writeFile(filename, folderDom.innerHTML)
+    .then(() => console.log('输出成功'))
+    .catch(err => console.log(err));
 //# sourceMappingURL=index.js.map
