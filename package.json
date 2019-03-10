@@ -17,11 +17,13 @@
   },
   "homepage": "https://github.com/yanlele/folder2md#readme",
   "devDependencies": {
+    "@types/fs-extra": "^5.0.5",
     "@types/jsdom": "^12.2.3",
     "@types/node": "^11.11.0",
     "typescript": "^3.3.3333"
   },
   "dependencies": {
+    "fs-extra": "^7.0.1",
     "jsdom": "^13.2.0"
   }
 }
